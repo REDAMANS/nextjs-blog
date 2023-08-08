@@ -2,10 +2,10 @@ import Head from 'next/head';
 import Link from 'next/link';
 import Layout, { siteTitle } from '../components/Layout';
 import utilStyles from '../styles/utils.module.css';
-import { getSortedPostData } from '../lib/posts';
+import { getAllPostsData } from '../lib/posts';
 
 export function getStaticProps() {
-  const allPostsData = getSortedPostData();
+  const allPostsData = getAllPostsData();
   return {
     props: {
       allPostsData
